@@ -13,7 +13,7 @@ from Basics.RawData import RawData
 import Basics.params as pr
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-data_path", nargs='?', default='../data/calib_pin/',
+parser.add_argument("-data_path", nargs='?', default='/home/shuk/Taxim/data/11_14_2022/sphere2',
                     help="Path to the folder with raw tactile data.")
 args = parser.parse_args()
 

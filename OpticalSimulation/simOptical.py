@@ -255,6 +255,10 @@ class simulator(object):
 
         # shift the gelpad to interact with the object
         gel_map = -1 * gel_map + (max_g+max_o-pressing_height_pix)
+        # rearrange gel_map image dimension WxH to HxW
+        gel_map = gel_map.T
+        print(gel_map.shape)
+        print(heightMap.shape)
 
         # get the contact area
         contact_mask = heightMap > gel_map
@@ -331,7 +335,7 @@ class simulator(object):
         return np.pad(img, ((1, 1), (1, 1)), 'symmetric')
 
 if __name__ == "__main__":
-    data_folder = osp.join(osp.join( "..", "calibs"))
+    data_folder = osp.join(osp.join( "..", "calibs/digit_nagoya2"))
     filePath = osp.join('..', 'data', 'objects')
     gelpad_model_path = osp.join( '..', 'calibs', 'gelmap5.npy')
     obj = args.obj + '.ply'
@@ -346,9 +350,9 @@ if __name__ == "__main__":
     heightMap, contact_mask, contact_height = sim.deformApprox(press_depth, height_map, gel_map, contact_mask)
     # simulate tactile images
     sim_img, shadow_sim_img = sim.simulating(heightMap, contact_mask, contact_height, shadow=True)
-    img_savePath = osp.join('..', 'results', obj[:-4]+'_sim.jpg')
-    shadow_savePath = osp.join('..', 'results', obj[:-4]+'_shadow.jpg')
-    height_savePath = osp.join('..', 'results', obj[:-4]+'_height.npy')
+    img_savePath = osp.join('..', 'results', obj[:-4]+'_sim_n2.jpg')
+    shadow_savePath = osp.join('..', 'results', obj[:-4]+'_shadow_n2.jpg')
+    height_savePath = osp.join('..', 'results', obj[:-4]+'_height_n2.npy')
     cv2.imwrite(img_savePath, sim_img)
     cv2.imwrite(shadow_savePath, shadow_sim_img)
     np.save(height_savePath, heightMap)

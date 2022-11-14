@@ -1,1 +1,5 @@
-/.results
+Basics/__pycache__/
+DataCollection/__pycache__/
+MarkerMotionSimulation/__pycache__/
+__pycache__/
+calibs/femCalib.npz

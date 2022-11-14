@@ -20,10 +20,10 @@ from nanogui import Texture
 from nanogui import glfw
 
 # define the image size, should be consistent with the raw data size
-w, h = 640, 480
+w, h = 480,640
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-data_path", nargs='?', default='../data/calib_ball/',
+parser.add_argument("-data_path", nargs='?', default='/home/shuk/Taxim/data/11_14_2022/sphere2',
                     help="Path to the collected raw tactile data.")
 args = parser.parse_args()
 
@@ -62,7 +62,7 @@ class CalibrateApp(ng.Screen):
     b = ng.Button(tools, "Open")
 
     def cb():
-        self.img_data_dir = ng.directory_dialog(data_path)
+        self.img_data_dir = data_path
         print("Selected directory = %s" % self.img_data_dir)
 
         # check for background Frame

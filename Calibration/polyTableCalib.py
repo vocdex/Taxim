@@ -14,7 +14,7 @@ import Basics.sensorParams as psp
 from Basics.Geometry import Circle
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-data_path", nargs='?', default='../data/calib_ball/',
+parser.add_argument("-data_path", nargs='?', default='/home/shuk/Taxim/data/11_14_2022/sphere2',
                     help="Path to the folder with data pack.")
 args = parser.parse_args()
 
