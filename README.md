@@ -4,14 +4,11 @@ Taxim is an example-based simulator for GelSight tactile sensors and its variati
 ## Installation and Prerequisites
 Basic dependencies: numpy, scipy, matplotlib, cv2
 
-To install dependencies: `pip install -r requirements.txt`
-
-Optional dependencies: ros with usb-cam driver (to collect the tactile images from a tactile sensor), nanogui (to annotate the raw data.)
-
-To install ros usb-cam driver, please check out [here](https://github.com/ros-drivers/usb_cam).
-
-To install nanogui, please check out [here](https://github.com/wjakob/nanogui).
-
+To install dependencies: 
+```bash
+`pip install -r requirements.txt` 
+'pip install nanogui'
+```
 ## Usage
 If you want to customize the Taxim on your own sensor, please follow the DataCollection and Calibration to calibrate the Taxim and generate calibration files. And modify the parameters under `Basic.params` and `Basic.sensorParams` accordingly.
 
