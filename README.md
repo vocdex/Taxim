@@ -1,4 +1,5 @@
 # Taxim: An Example-based Simulation Model for GelSight Tactile Sensors
+This fork is modified for using Taxim with Digit tactile sensor. 
 Taxim is an example-based simulator for GelSight tactile sensors and its variations. For more information of Taxim, you can check the [paper](https://arxiv.org/abs/2109.04027) or the [webpage](https://labs.ri.cmu.edu/robotouch/taxim-simulation/).
 
 ## Installation and Prerequisites
