@@ -1,5 +1,7 @@
 # Taxim: An Example-based Simulation Model for GelSight Tactile Sensors
-This fork is modified for using Taxim with Digit tactile sensor. 
+This fork is modified for using Taxim with Digit tactile sensor.   
+Check the results section for simulated images of DIGIT.
+Make sure to modify the calibration file paths inside simOptical.py and simMarkMotionField.py for your calibration files.
 Taxim is an example-based simulator for GelSight tactile sensors and its variations. For more information of Taxim, you can check the [paper](https://arxiv.org/abs/2109.04027) or the [webpage](https://labs.ri.cmu.edu/robotouch/taxim-simulation/).
 
 ## Installation and Prerequisites
